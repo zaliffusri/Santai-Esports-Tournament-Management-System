@@ -1,0 +1,83 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0d0d0d; /* Almost black background */
+    color: #ffffff; /* White text color */
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    padding-bottom: 80px; /* Add padding to avoid overlap with the footer header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section {
+    text-align: center;
+    border: 1px solid #444444; /* Add border around the section */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #1a1a1a; /* Very dark gray */
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Stylish yellow color */
+}
+
+.certifications-container {
+    width: 100%;
+    max-width: 1000px;
+    overflow-x: auto; /* Add horizontal scroll for small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #444444; /* Slightly lighter border */
+}
+
+th {
+    background-color: #1a1a1a; /* Very dark gray */
+    color: #ffcc00; /* Stylish yellow color */
+}
+
+td {
+    background-color: #333333; /* Dark gray background */
+}
+
+.download-button {
+    background-color: #ffcc00; /* Stylish yellow button */
+    color: #0d0d0d; /* Almost black text color */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Adjusted font size */
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Center icon and text vertically */
+}
+
+.download-button:hover {
+    background-color: #ff4500; /* Orange-red on hover */
+}
+
+.download-button .iconify {
+    margin-right: 5px; /* Space between icon and text */
+}

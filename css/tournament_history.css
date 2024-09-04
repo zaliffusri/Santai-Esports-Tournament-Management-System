@@ -1,0 +1,97 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0d0d0d; /* Almost black background */
+    color: #ffffff; /* White text color */
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    padding-bottom: 80px; /* Add padding to avoid overlap with the footer header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section {
+    text-align: center;
+    border: 1px solid #444444; /* Add border around the section */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    background-color: #1a1a1a; /* Very dark gray */
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Stylish yellow color */
+}
+
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-container input,
+.search-container select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #444444;
+    background-color: #333333; /* Dark gray background */
+    color: #ffffff; /* White text color */
+}
+
+.search-container input::placeholder {
+    color: #cccccc; /* Light gray text color */
+}
+
+.history-container {
+    width: 100%;
+    max-width: 1000px;
+    overflow-x: auto; /* Add horizontal scroll for small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #444444; /* Slightly lighter border */
+}
+
+th {
+    background-color: #1a1a1a; /* Very dark gray */
+    color: #ffcc00; /* Stylish yellow color */
+}
+
+td {
+    background-color: #333333; /* Dark gray background */
+}
+
+.poster {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.clickable-row {
+    cursor: pointer;
+}
+
+.clickable-row:hover {
+    background-color: #444444; /* Slightly lighter background on hover */
+}

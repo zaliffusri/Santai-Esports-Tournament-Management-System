@@ -1,0 +1,262 @@
+/* General body styles */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d6e;
+    /* Almost black background for the whole page */
+    color: #00ff99;
+    /* Vibrant neon green text color */
+    font-family: 'Arial', sans-serif;
+    /* Modern, readable typography */
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    /* Use gaming font for the heading */
+    animation: blink-animation 1.5s infinite;
+    color: #00ff99;
+    /* Neon green color for the heading */
+}
+
+a {
+    color: #00ffff;
+    /* Light neon blue color for links */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ff00ff;
+    /* Neon pink color on hover */
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Background video */
+#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background: url('../image/background.png') no-repeat;
+    background-size: cover;
+}
+
+/* Main content area */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Set the main area to be exactly the height of the viewport */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Includes padding in the height calculation */
+}
+
+/* Container for image and forms */
+.container {
+    display: flex;
+    width: 70%;
+    /* Adjusted width for better fitting */
+    height: 80%;
+    /* Set height to limit the vertical size */
+    max-width: 1000px;
+    /* Adjusted maximum width of the container */
+    align-items: stretch;
+    /* Align items to fill the container height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Subtle shadow for depth */
+    border-radius: 8px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Prevents any overflow from the container */
+    z-index: 1;
+    /* Ensure the container is above the video */
+}
+
+/* Image container styling */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    background: url('../image/blacksand.png') no-repeat center center;
+    background-size: cover;
+    background-color: #1a1a1a;
+    /* Set background color to very dark gray */
+    position: relative;
+    /* Ensure the image is positioned relative to the container */
+}
+
+/* Image styling */
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Forms container */
+.forms-container {
+    flex: 1;
+    /* Takes the other half */
+    background-color: #33333381;
+    /* Dark background color for forms area */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center form vertically in the container */
+    border-top-right-radius: 8px;
+    /* Rounded corners on the right */
+    border-bottom-right-radius: 8px;
+    text-align: center;
+}
+
+/* Adjust button and input field styles here if needed */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+    width: 100%;
+    /* Full width */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    background: #1a1a1a;
+    border: none;
+    color: #00ff99;
+    /* Neon green color for inputs */
+    box-sizing: border-box;
+    /* This change ensures padding and borders are included in the width */
+}
+
+button {
+    background-color: #ff00ff;
+    /* Vibrant neon pink button */
+    color: #0d0d0d;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4500;
+    /* Orange-red on hover */
+}
+
+.strength-indicator {
+    display: none;
+    color: #ff4500;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.password-hint {
+    display: none;
+    color: #00ffff;
+    font-size: 0.9em;
+    background-color: #1a1a1a;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    right: 100%;
+    /* Align the hint to the left of the button */
+    top: 50%;
+    /* Center the hint vertically relative to the button */
+    transform: translateY(-50%);
+    white-space: nowrap;
+    /* Prevent line breaks */
+}
+
+.hint-button {
+    background-color: transparent;
+    color: #00ff99;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 0;
+    font-size: 1em;
+    /* Adjusted font size to make the button smaller */
+    width: 24px;
+    /* Fixed width to make the button smaller */
+    height: 24px;
+    /* Fixed height to make the button smaller */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hint-button:hover .password-hint {
+    display: block;
+}
+
+.hint-button:hover {
+    color: #ff4500;
+}
+
+.password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    color: #00ffff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}

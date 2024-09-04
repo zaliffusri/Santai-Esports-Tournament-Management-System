@@ -1,0 +1,161 @@
+/* Match.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    padding: 20px;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.back-button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+.match-details {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.match-details h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.participant {
+    margin-bottom: 10px;
+}
+
+.participant h4 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.participant label {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+
+.participant input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 7px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.match-result {
+    margin-top: 10px;
+}
+
+.match-result h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Modal styling */
+#matchModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#modalBackdrop {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.close-button {
+    background-color: #f4f4f4;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: #ddd;
+}
+
+.modal-content {
+    padding: 10px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.modal-footer button {
+    margin-left: 10px;
+}

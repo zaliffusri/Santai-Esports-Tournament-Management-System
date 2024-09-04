@@ -1,0 +1,89 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar-container {
+    flex: 0 0 250px; /* Adjust the width of the sidebar */
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.content-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.main-content h2 {
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.report-table th, .report-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+.report-table th {
+    background-color: #714949;
+    text-align: left;
+}
+
+.print-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.print-btn:hover {
+    background-color: #218838;
+}
+
+@media print {
+    .sidebar-container, .filter-buttons, .print-btn {
+        display: none;
+    }
+    body * {
+        visibility: hidden;
+    }
+    .print-area, .print-area * {
+        visibility: visible;
+    }
+    .print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    header, footer {
+        display: none;
+    }
+}

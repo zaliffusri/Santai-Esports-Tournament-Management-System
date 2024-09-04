@@ -1,0 +1,68 @@
+/* General body styles */
+body {
+    background-color: #121212; /* Dark background for the whole page */
+    color: #E0E0E0; /* Light grey text color for readability */
+    font-family: 'Arial', sans-serif; /* Modern, readable typography */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #1E1E1E; /* Slightly lighter shade of black for the header */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Navigation menu styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Align nav items in a line */
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #E0E0E0; /* Same as body text color */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #BB86FC; /* Light purple for hover effects */
+}
+
+/* Main section styles */
+main {
+    padding: 20px;
+    text-align: center; /* Centering the text inside the main tag */
+}
+
+section#dashboard-content {
+    background-color: #2A2A2A; /* Dark grey background for content area */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px; /* Rounded corners for aesthetic */
+    width: 80%; /* Manageable width for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Footer styles */
+footer {
+    background-color: #1E1E1E; /* Same as header background */
+    color: #E0E0E0;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Optional: Add background images to the main or section areas */
+main {
+    background-image: url('path/to/your/cool-background.jpg'); /* Add your own image URL here */
+    background-size: cover;
+    background-position: center;
+}

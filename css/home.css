@@ -1,0 +1,143 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    z-index: 10; /* Ensure the header stays on top */
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1; /* Ensure the main content is below the header */
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 460px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.slide img, .slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image/video covers the container while maintaining aspect ratio */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.new-news {
+    padding: 20px;
+    background-color: #121212; /* Dark background color */
+    color: white; /* White text color */
+    margin-top: 10px; /* Add a gap between the banner and the news section */
+    margin-bottom: 100px;
+}
+
+.new-news h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white; /* White text color */
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.news-item {
+    background: #1e1e1e; /* Dark background color for news items */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: calc(33.333% - 20px); /* Three news items per row */
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Ensure text color is white */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.news-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: white; /* White text color */
+}
+
+.news-item p {
+    color: #ccc; /* Light gray text color */
+    margin: 0;
+}
+
+.news-date {
+    color: #ff6f61; /* Date text color */
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .news-item {
+        width: calc(50% - 20px); /* Two news items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .news-item {
+        width: 100%; /* One news item per row on very small screens */
+    }
+}

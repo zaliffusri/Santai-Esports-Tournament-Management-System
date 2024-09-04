@@ -1,0 +1,112 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.main-content-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.main-content h2 {
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.report-table th, .report-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.report-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.print-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.print-btn:hover {
+    background-color: #218838;
+}
+
+@media print {
+    .sidebar-container, .filter-buttons, .print-btn {
+        display: none;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    .print-area, .print-area * {
+        visibility: visible;
+    }
+
+    .print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    header, footer {
+        display: none;
+    }
+}
+
+.company-logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.print-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.print-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.print-table th, .print-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.print-table th {
+    text-align: left;
+    padding: 8px;
+    background-color: #f2f2f2;
+}
